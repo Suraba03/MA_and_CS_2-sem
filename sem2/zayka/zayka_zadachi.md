@@ -177,6 +177,7 @@ int main (void)
 + делаем рекурсивный обход в глубину
     + доходим по сыновьям ```root->son``` до ```root->son == NULL``` -- ```depth(root->son, h, count + 1);```
     + доходим по братьям ```root->brother``` до ```root->brother == NULL``` --               ```depth(root->brother, h, count);```
+
 ![v4p1](https://github.com/Suraba03/SKATbl/blob/main/sem2/zayka/photo/v4n1.jpg)
 
 
@@ -375,7 +376,9 @@ void merge_sort(stack **x)
             + база - длина стэка, поданного в функцию будет = 1
         + когда пойдут обратные вызовы рекурсии, начнет выполняться функция ```merge(a, b)```.
             + картиночка !!!!
-            + ![v7n1](https://github.com/Suraba03/SKATbl/blob/main/sem2/zayka/photo/v7n1.png)
+            
+	    ![v7n1](https://github.com/Suraba03/SKATbl/blob/main/sem2/zayka/photo/v7n1.png)
+
 + в ```х``` будет храниться отсортированный стэк
 
 
@@ -727,9 +730,13 @@ typedef struct {
     + в корне будет находиться оператор с самым меньшим приоритетом, т.е. последний в строке символ - '|', пример ((1 & 0) | 1) х|х ((0 & 1)
     + и тд
 + сделать обратный обход бинарного дерева, записать его значения в новый массив токенов
+
 ![v13n1](https://github.com/Suraba03/SKATbl/blob/main/sem2/zayka/photo/v13n1.png)
+
 + обратная польская нотация
+
 ![v13n2](https://github.com/Suraba03/SKATbl/blob/main/sem2/zayka/photo/v13n2.png)
+
 + до обхода дерева: [1, &, 0, |, 1, |, 0, &, 1], после: постфиксная нотация [1, 0, &, 1, |, 0, 1, &, |]
 + обходим массив, при встрече тройки токенов вида операнд,операнд,операция, делаем следующую замену
     + 00| -> 0, иначе ??| -> 1
