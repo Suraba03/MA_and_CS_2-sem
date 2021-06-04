@@ -719,32 +719,7 @@ void Quick (int arr[], int n)
 
 # __билет 13__ -- вычислить константное булевское выражение с помощью обратной польской записи
 
-#### __Код через стек__
-```c
-int main() {
-	int i = 0; char a[100], x;
-	stack *a = NULL; 
-	scanf("%s", a);
-	while (a[i] != '\0') {
-		if a[i] == '(' {
-			x = a[i];
-			push(a, x);
-		}
-		if a[i] == ')'{
-			if a[i] == top()
-				pop(&a); else {
-				printf("False\n");
-				return 1;
-			}
-		} i++;
-	}
-	if (top() != NULL)
-		printf("False\n")
-	else
-		printf("True\n");
-	return 0;
-}
-```
+
 #### __Код__
 
 ```c
@@ -795,7 +770,32 @@ typedef struct {
 
 
 # __билет 14__ -- проверка вложенности скобок
-
+#### __Код через стек__
+```c
+int main() {
+	int i = 0; char a[100], x;
+	stack *a = NULL; 
+	scanf("%s", a);
+	while (a[i] != '\0') {
+		if a[i] == '(' {
+			x = a[i];
+			push(a, x);
+		}
+		if a[i] == ')'{
+			if a[i] == top()
+				pop(&a); else {
+				printf("False\n");
+				return 1;
+			}
+		} i++;
+	}
+	if (top() != NULL)
+		printf("False\n")
+	else
+		printf("True\n");
+	return 0;
+}
+```
 #### __Код__
 
 ```c
